@@ -4,7 +4,7 @@
     "contents": [
        {
           "type": "dir", 
-          "name": "FOSS_contribution"
+          "name": "home"
        }, 
        {
           "type": "text", 
@@ -12,7 +12,7 @@
        }, 
        {
           "type": "dir", 
-          "name": "competitive_programming"
+          "name": "extra"
        }, 
        {
           "type": "dir", 

@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import './terminal.css';
 import files from '../../filesystem/fs.json'
-import tree from './commands'
+import * as commands from './commands'
+
 
 export class Terminal extends Component
 {
@@ -28,12 +29,12 @@ export class Terminal extends Component
                 element.appendChild(breakStatement);
                 terminalOutput.append(element)
             }else{
-                console.log(this.state.cmd)
-                if(this.state.cmd === "tree"){
-                    tree(files)  
+                if(e.target.value === "tree"){
+                    commands.tree(files)  
                 }
-                var doc = document.getElementById('input')
-                doc.value=''
+                if(e.target.value === "ls"){
+                    commands.ls(files)
+                }
             }
             
         }
