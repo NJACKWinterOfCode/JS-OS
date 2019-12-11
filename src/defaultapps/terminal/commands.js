@@ -24,4 +24,21 @@ export var ls = (res) => {
     }
 }
 
+export var cat = (res,arg) => {
+    var element = document.createElement("div")
+    element.appendChild(document.createTextNode('user@root:~$ ls'))
+    var content = document.createElement("br")
+    var content2 = document.createElement("br")
+    for(let i=0;i<4;i++){
+        if(res.contents[i].name === arg){
+            console.log(res.contents[i].content)
+            var terminalOutput=document.getElementById('terminalOutput');
+            element.appendChild(content)
+            element.appendChild(document.createTextNode(res.contents[i].content))
+            terminalOutput.append(element)
+            terminalOutput.appendChild(content2)
+
+        }
+    }
+}
 

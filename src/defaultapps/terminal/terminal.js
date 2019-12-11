@@ -35,6 +35,12 @@ export class Terminal extends Component
                 if(e.target.value === "ls"){
                     commands.ls(files)
                 }
+                var regex_cat = /cat/g;
+                var regex_argument = /^\S*\s+(\S+)/;
+                var argument = regex_argument.exec(e.target.value);
+                if(regex_cat.exec(e.target.value)){
+                    commands.cat(files,argument[1])
+                }
             }
             
         }

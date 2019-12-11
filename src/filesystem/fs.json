@@ -8,7 +8,8 @@
        }, 
        {
           "type": "text", 
-          "name": "README"
+          "name": "README",
+          "content": "You are witnessing the coolest OS made with JS. Authors are @RAJAGOPALAN-GANGADHARAN & @ankingcodes."
        }, 
        {
           "type": "dir", 
